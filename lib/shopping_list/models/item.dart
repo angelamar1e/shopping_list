@@ -1,6 +1,6 @@
 class Item {
-  String itemDescription;
+  String description;
   int quantity;
 
-  Item(this.itemDescription, this.quantity);
+  Item(this.description, this.quantity);
 }

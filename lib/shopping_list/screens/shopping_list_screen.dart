@@ -27,7 +27,7 @@ class ShoppingListScreen extends StatelessWidget {
 
     Future<Item?> openDialog([Item? existingItem]) {
       final TextEditingController descriptionController = TextEditingController(
-        text: existingItem?.itemDescription ?? '',
+        text: existingItem?.description ?? '',
       );
       final TextEditingController quantityController = TextEditingController(
         text: existingItem?.quantity.toString() ?? '',
@@ -118,11 +118,8 @@ class ShoppingListScreen extends StatelessWidget {
                                 child: Card(
                                   child: ListTile(
                                     title: Text(
-                                      item.itemDescription,
-                                      style: TextStyle(
-                                        fontSize: 20,
-                                        fontWeight: FontWeight.bold,
-                                      ),
+                                      item.description,
+                                      style: TextStyle(fontSize: 20),
                                     ),
                                     subtitle: RichText(
                                       textAlign: TextAlign.end,
@@ -141,7 +138,6 @@ class ShoppingListScreen extends StatelessWidget {
                                             text: "Quantity: ",
                                             style: TextStyle(
                                               fontStyle: FontStyle.italic,
-                                              fontWeight: FontWeight.bold,
                                             ),
                                           ),
                                           TextSpan(
