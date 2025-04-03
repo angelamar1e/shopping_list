@@ -87,9 +87,9 @@ Widget floatingAddListItemButton(context, {required bloc}) {
   return FloatingActionButton(
     child: Icon(Icons.add),
     onPressed: () async {
-      final Item newItem = await openDialog(context) as Item;
+      final Item? newItem = await openDialog(context);
 
-      bloc.add(ItemAdded(newItem));
+      bloc.add(ItemAdded(newItem!));
     },
   );
 }

@@ -25,7 +25,7 @@ class ShoppingListScreen extends StatelessWidget {
 
             return Column(
               children: [
-                for (Item item in state.shoppingList.cast<Item>())
+                for (Item item in shoppingList)
                   Dismissible(
                     key: Key(state.shoppingList.indexOf(item).toString()),
                     onDismissed: (direction) {
