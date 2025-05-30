@@ -1,3 +1,3 @@
-# shopping_list
+# 📝 Shopping List 
 
-A new Flutter project.
+A basic Flutter app designed to help users manage their shopping items, demonstrating full CRUD functionality.
